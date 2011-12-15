@@ -27,7 +27,23 @@
 </head>
   <body>
     <div id="MainWindow" class="main">
-      
-    </div>
+            <div id="realTime">
+
+        </div>    
+        <script>
+     var graph2 = new mooBarGraph({
+            container: $('realTime'),
+            data: [[20]],
+            width: 900,
+            color: '#C4D7ED',
+            barSpace: 5,
+            title: '<h3>Current DBMAIL Active Connections<br /><small>sending AJAX request on each 4000ms</small></h3>',
+            realTime: true,
+            showValuesColor: '#518DC8'
+});
+
+setInterval( function(){ graph2.draw('/ajax'); }, 4000 );   
+</script>
+ </div>
   </body>
 </html>

@@ -85,6 +85,7 @@
     */
     $site = new FrankApplication(array(
     array('/', 'MainHandler'),
+    array('/ajax', 'AjaxHandler'), 
     ));
     /**
     * SERVE Pages
